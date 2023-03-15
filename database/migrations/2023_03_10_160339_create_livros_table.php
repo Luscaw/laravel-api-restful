@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('livros', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->string('title')->unique();
             $table->string('author');
             $table->timestamps();
             $table->softDeletes();
